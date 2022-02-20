@@ -37,7 +37,7 @@ fi
 #	echo "199.232.28.133 raw.githubusercontent.com" >> /etc/hosts
 #fi
 
-# install neovim
+# install and config neovim
 if cat "$USERPATH/.bashrc" | grep "alias vim='nvim'" > /dev/null
 then
     :
@@ -122,7 +122,12 @@ echo "export PATH=\$PATH:~/Applications/lua-5.4.4/src" >> ~/.bashrc
 source ~/.bashrc
 fi
 
-
+# nvim-lspconfig install lua language server client
+# clangd
+sudo apt-get install clangd-12 -y
+sudo update-alternatives --install /usr/bin/clangd clangd /usr/bin/clangd-12 100
+#bashls
+npm i -g bash-language-server
 
 
 else
