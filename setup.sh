@@ -50,6 +50,7 @@ echo "alias vim='nvim'" >> ~/.bashrc
 source ~/.bashrc
 cd ../
 rm -rf neovim
+cp -r $PROJPATH/nvim ~/.config
 fi
 
 sudo apt-get install git -y
