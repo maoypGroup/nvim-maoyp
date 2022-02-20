@@ -8,6 +8,13 @@ USERPATH=/home/maoyp
 
 # get shell config file path
 
+# change sudo time
+if sudo cat "/etc/sudoers" | grep "env_reset,timestamp_timeout=180" > /dev/null
+then
+    :
+else
+    sudo sed -i 's/env_reset/&,timestamp_timeout=180/' /etc/sudoers
+fi
 
 # main set
 if uname -a | grep "Ubuntu" > /dev/null
