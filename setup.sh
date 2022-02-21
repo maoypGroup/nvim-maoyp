@@ -16,7 +16,7 @@ else
     sudo sed -i 's/env_reset/&,timestamp_timeout=180/' /etc/sudoers
 fi
 
-# main set
+################ main set #################
 if uname -a | grep "Ubuntu" > /dev/null
 then
 
